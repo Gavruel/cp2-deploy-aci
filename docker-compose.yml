@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  cp2:
+    image: imagemcp2  # Substitua "imagemcp2" pelo nome da sua imagem
+    build:
+      context: .
+      dockerfile: CP2\Dockerfile
+    environment:
+      ConnectionStrings__OracleConnection: "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=oracle.fiap.com.br)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=rm94430;Password=201102;"
